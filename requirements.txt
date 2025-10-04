@@ -1,0 +1,15 @@
+# Core dependencies
+human-eval>=1.0.3
+anthropic>=0.25.0
+google-generativeai>=0.5.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Environment management
+python-dotenv>=1.0.0
+
+# Optional but recommended
+setuptools>=65.0.0
+wheel>=0.40.0

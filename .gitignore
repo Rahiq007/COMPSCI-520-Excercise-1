@@ -1,0 +1,26 @@
+# API Keys - NEVER COMMIT THESE!
+.env
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Project specific
+temp_*
+humaneval_problems.json
+results/
+generated_code/
+report/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
