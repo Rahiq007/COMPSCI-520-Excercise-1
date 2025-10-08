@@ -204,9 +204,3 @@ This project is licensed under the MIT License.
 - Google Gemini API
 
 ---
-
-<div align="center">
-  
-**⭐ Star this repository if you found it helpful!**
-
-</div>
