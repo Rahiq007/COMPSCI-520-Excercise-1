@@ -89,8 +89,8 @@ llm-code-generation-assignment/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR-USERNAME/llm-code-generation-assignment.git
-   cd llm-code-generation-assignment
+   git clone [https://github.com/YOUR-USERNAME/llm-code-generation-assignment.git](https://github.com/Rahiq007/COMPSCI-520-Excercise-1)
+   cd COMPSCI-520-Excercise-1
    ```
 
 2. **Create virtual environment**
