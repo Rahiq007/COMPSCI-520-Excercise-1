@@ -1,0 +1,13 @@
+SELECTED PROBLEMS FOR PART 2
+================================================================================
+
+Problem 1: HumanEval_54
+  - Current Branch Coverage: 31%
+  - Selection Metric Score: 6900
+
+Problem 2: HumanEval_2
+  - Current Branch Coverage: 44%
+  - Selection Metric Score: 5600
+
+Selection Metric: |%test_passed - %branch_coverage| × %test_passed
+All tests passed (100%), so metric = |100 - branch%| × 100

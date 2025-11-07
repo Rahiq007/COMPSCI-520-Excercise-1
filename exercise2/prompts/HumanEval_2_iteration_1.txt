@@ -1,0 +1,42 @@
+Problem: HumanEval_2
+Iteration: 1
+Target: Aim for >80% branch coverage (must test negative case!)
+
+================================================================================
+PROMPT:
+================================================================================
+
+
+Generate comprehensive unit tests for the following Python function:
+
+```python
+def truncate_number(number: float) -> float:
+    if number < 0:
+        raise ValueError("Function expects a positive floating point number")
+    integer_part = int(number)
+    decimal_part = number - integer_part
+    return decimal_part
+```
+
+CRITICAL: Current tests DO NOT cover the negative number ValueError path (line 12).
+
+Generate tests that cover:
+1. **Negative numbers** - test that ValueError is raised (use pytest.raises)
+2. Zero (0.0 and 0)
+3. Integer values (1.0, 5.0, 10.0) - should return 0.0
+4. Small decimal values (0.1, 0.001, 0.999)
+5. Large numbers (1000.5, 999999.123)
+6. Edge cases around floating point precision
+
+Format as pytest functions. Import: from HumanEval_2 import truncate_number
+Import pytest for testing exceptions: import pytest
+
+Provide only the test functions, no additional explanation.
+
+
+================================================================================
+USAGE:
+1. Copy this prompt to Claude/ChatGPT
+2. Get generated test code
+3. Add tests to tests/test_HumanEval_2.py
+4. Run coverage and record results

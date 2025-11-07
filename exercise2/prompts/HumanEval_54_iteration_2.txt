@@ -1,0 +1,32 @@
+Problem: HumanEval_54
+Iteration: 2
+Target: Aim for >80% branch coverage
+
+================================================================================
+PROMPT:
+================================================================================
+
+
+Based on the current coverage gaps, generate additional edge case tests for same_chars function:
+
+```python
+def same_chars(s0: str, s1: str):
+    return set(s0) == set(s1)
+```
+
+Focus on:
+1. Unicode and non-ASCII characters (émojis, accented characters)
+2. Numeric strings
+3. Mixed alphanumeric with special symbols
+4. Very long strings vs short strings with same characters
+5. Strings with only whitespace characters
+
+Provide only new test functions that don't duplicate previous tests.
+
+
+================================================================================
+USAGE:
+1. Copy this prompt to Claude/ChatGPT
+2. Get generated test code
+3. Add tests to tests/test_HumanEval_54.py
+4. Run coverage and record results

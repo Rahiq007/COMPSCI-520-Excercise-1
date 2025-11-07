@@ -1,0 +1,38 @@
+Problem: HumanEval_54
+Iteration: 1
+Target: Aim for >60% branch coverage
+
+================================================================================
+PROMPT:
+================================================================================
+
+
+Generate comprehensive unit tests for the following Python function:
+
+```python
+def same_chars(s0: str, s1: str):
+    return set(s0) == set(s1)
+```
+
+The function checks if two strings have the same set of unique characters.
+
+Current baseline tests cover basic cases. Generate tests that cover:
+1. Empty strings (both empty, one empty, one non-empty)
+2. Single character strings
+3. Strings with repeated characters
+4. Special characters and symbols
+5. Whitespace handling
+6. Case sensitivity (uppercase vs lowercase)
+
+Format the tests as pytest functions that can be added to the existing test file.
+Import the function as: from HumanEval_54 import same_chars
+
+Provide only the test functions, no additional explanation.
+
+
+================================================================================
+USAGE:
+1. Copy this prompt to Claude/ChatGPT
+2. Get generated test code
+3. Add tests to tests/test_HumanEval_54.py
+4. Run coverage and record results

@@ -10,17 +10,47 @@ __pycache__/
 *.pyd
 .Python
 
-# Project specific
+# Exercise 1 specific
 temp_*
 humaneval_problems.json
 results/
 generated_code/
 report/
 
+# Exercise 2 specific
+# Coverage reports (can be regenerated)
+.coverage
+.coverage.*
+htmlcov/
+
+# Pytest cache
+.pytest_cache/
+.pytest/
+
+# Backup files from fault detection
+*_original_backup.py
+
+# Iteration tracking (logs are large)
+iterations/
+
+# Temporary files
+temp_coverage.json
+*.log
+
 # OS
 .DS_Store
 Thumbs.db
+.directory
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# Node modules (if using any JS tools)
+node_modules/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/

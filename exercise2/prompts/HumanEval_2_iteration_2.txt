@@ -1,0 +1,35 @@
+Problem: HumanEval_2
+Iteration: 2
+Target: Aim for >90% branch coverage
+
+================================================================================
+PROMPT:
+================================================================================
+
+
+Based on coverage gaps, generate additional edge case tests for truncate_number:
+
+```python
+def truncate_number(number: float) -> float:
+    if number < 0:
+        raise ValueError("Function expects a positive floating point number")
+    integer_part = int(number)
+    decimal_part = number - integer_part
+    return decimal_part
+```
+
+Focus on:
+1. Boundary values near zero (0.0000001, 0.9999999)
+2. Very large floating point numbers
+3. Multiple negative number test cases if not fully covered
+4. Float precision edge cases (0.30000000000000004)
+
+Provide only new test functions.
+
+
+================================================================================
+USAGE:
+1. Copy this prompt to Claude/ChatGPT
+2. Get generated test code
+3. Add tests to tests/test_HumanEval_2.py
+4. Run coverage and record results
