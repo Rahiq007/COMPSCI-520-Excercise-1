@@ -1,0 +1,73 @@
+You are tasked with generating comprehensive test cases based on formal specifications.
+
+Problem Description:
+Given a positive floating point number, it can be decomposed into
+and integer part (largest integer smaller than given number) and decimals
+(leftover part always smaller than 1).
+
+Return the decimal part of the number.
+>>> truncate_number(3.5)
+0.5
+
+Method Signature:
+def truncate_number(number: float) -> float
+
+Formal Specifications (Corrected and Validated):
+```python
+# Corrected Specifications for HumanEval_2: truncate_number
+# Problem: Return the decimal part of a positive floating point number
+# Signature: def truncate_number(number: float) -> float
+# Let 'res' denote the expected return value
+# All specifications were correct - no corrections needed
+
+# Specification 1: Result is the decimal part
+assert res == (number - int(number))  # Result equals the number minus its integer part
+
+# Specification 2: Result range constraint
+assert 0 <= res < 1  # Decimal part must be between 0 (inclusive) and 1 (exclusive)
+
+# Specification 3: Reconstruction property
+assert number == int(number) + res  # Original number can be reconstructed from integer part and result
+
+# Specification 4: Non-negativity
+assert res >= 0  # Decimal part is always non-negative
+
+# Specification 5: Integer input handling
+assert (number == int(number)) <= (res == 0)  # If input is an integer, result should be 0
+```
+
+TASK:
+Generate comprehensive test cases that verify each specification above. 
+
+REQUIREMENTS:
+1. Create test functions using pytest format
+2. Each test should clearly verify one or more specifications
+3. Include both positive and negative test cases
+4. Label each test with a comment indicating which specification(s) it tests
+5. Use descriptive test function names that explain what is being tested
+6. Include edge cases and boundary conditions
+7. Import the function at the top of the file
+
+TEST FILE STRUCTURE:
+```python
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'solutions'))
+from HumanEval_2 import truncate_number
+
+def test_truncate_number_<descriptive_name>():
+    '''Test specification 1: <which spec this tests>'''
+    # Test code here
+    result = truncate_number(input_args)
+    assert result == expected_output
+```
+
+IMPORTANT:
+- Generate 8-12 test functions
+- Cover all specifications comprehensively
+- Include edge cases (empty inputs, None, boundary values, etc.)
+- Ensure tests are runnable with pytest
+- Each test should be independent and self-contained
+- Use clear, descriptive test names
+
+Please generate the complete test file with all imports and test functions now:

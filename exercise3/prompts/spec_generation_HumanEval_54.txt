@@ -1,0 +1,36 @@
+Problem description: Check if two words have the same characters.
+>>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+True
+>>> same_chars('abcd', 'dddddddabc')
+True
+>>> same_chars('dddddddabc', 'abcd')
+True
+>>> same_chars('eabcd', 'dddddddabc')
+False
+>>> same_chars('abcd', 'dddddddabce')
+False
+>>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')
+False
+
+Method signature: def same_chars(s0: str, s1: str)
+
+Please write formal specifications as Python assertions that describe the correct behavior of this method.
+
+CRITICAL RULES:
+1. Write specifications as assert statements
+2. Let 'res' denote the expected return value of same_chars
+3. Do NOT call 'same_chars()' in your assertions (no self-reference)
+4. Do NOT use methods with side effects such as:
+   - print(), input(), file operations
+   - random number generation (random.random())
+   - timing functions (time.time(), datetime.now())
+   - data structure modifications (list.append(), dict.update(), set.add())
+5. Express relationships using ONLY pure arithmetic and boolean logic
+
+Generate approximately 5 formal specifications that capture key properties of this function.
+
+Format each specification as:
+assert <logical_expression>  # Comment explaining what this checks
+
+Example format (do not use this exact assertion, generate appropriate ones for the problem):
+assert res == (n % 2 == 0)  # Result must equal "n is divisible by 2"

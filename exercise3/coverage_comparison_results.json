@@ -1,0 +1,62 @@
+{
+  "exercise2": {
+    "HumanEval_54": {
+      "baseline": {
+        "stmt_coverage": 31.0,
+        "branch_coverage": 31.0,
+        "tests_passed": 1
+      },
+      "final": {
+        "stmt_coverage": 31.0,
+        "branch_coverage": 31.0,
+        "tests_passed": 10,
+        "iterations": 3
+      }
+    },
+    "HumanEval_2": {
+      "baseline": {
+        "stmt_coverage": 44.0,
+        "branch_coverage": 44.0,
+        "tests_passed": 1
+      },
+      "final": {
+        "stmt_coverage": 56.0,
+        "branch_coverage": 56.0,
+        "tests_passed": 16,
+        "iterations": 3
+      }
+    }
+  },
+  "exercise3": {
+    "HumanEval_54": {
+      "spec_guided": {
+        "stmt_coverage": 31.0,
+        "branch_coverage": 31.0,
+        "tests_passed": 12,
+        "specifications": 5,
+        "accuracy": 100.0
+      }
+    },
+    "HumanEval_2": {
+      "spec_guided": {
+        "stmt_coverage": 44.0,
+        "branch_coverage": 44.0,
+        "tests_passed": 12,
+        "specifications": 5,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "comparison": {
+    "HumanEval_54": {
+      "ex2_improvement": 0.0,
+      "ex3_vs_ex2_final": 0.0,
+      "conclusion": "No change - function already fully covered"
+    },
+    "HumanEval_2": {
+      "ex2_improvement": 12.0,
+      "ex3_vs_ex2_final": -12.0,
+      "conclusion": "Spec-guided missed error handling branch"
+    }
+  }
+}

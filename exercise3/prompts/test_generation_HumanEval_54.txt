@@ -1,0 +1,79 @@
+You are tasked with generating comprehensive test cases based on formal specifications.
+
+Problem Description:
+Check if two words have the same characters.
+>>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+True
+>>> same_chars('abcd', 'dddddddabc')
+True
+>>> same_chars('dddddddabc', 'abcd')
+True
+>>> same_chars('eabcd', 'dddddddabc')
+False
+>>> same_chars('abcd', 'dddddddabce')
+False
+>>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')
+False
+
+Method Signature:
+def same_chars(s0: str, s1: str)
+
+Formal Specifications (Corrected and Validated):
+```python
+# Corrected Specifications for HumanEval_54: same_chars
+# Problem: Check if two words have the same characters.
+# Signature: def same_chars(s0: str, s1: str)
+# Let 'res' denote the expected return value
+# All specifications were correct - no corrections needed
+
+# Specification 1: Core property - result equals set equality
+assert res == (set(s0) == set(s1))  # Result must be True iff both strings have identical character sets
+
+# Specification 2: Result is boolean type
+assert isinstance(res, bool)  # Result must be a boolean value
+
+# Specification 3: Symmetric property
+assert res == (set(s1) == set(s0))  # Function is symmetric - order of arguments doesn't matter
+
+# Specification 4: Empty string handling
+assert (len(s0) == 0 and len(s1) == 0) <= (res == True)  # Two empty strings should return True
+
+# Specification 5: Character count independence
+assert res == (len(set(s0) & set(s1)) == len(set(s0)) and len(set(s0) & set(s1)) == len(set(s1)))  # Intersection of character sets equals both individual sets
+```
+
+TASK:
+Generate comprehensive test cases that verify each specification above. 
+
+REQUIREMENTS:
+1. Create test functions using pytest format
+2. Each test should clearly verify one or more specifications
+3. Include both positive and negative test cases
+4. Label each test with a comment indicating which specification(s) it tests
+5. Use descriptive test function names that explain what is being tested
+6. Include edge cases and boundary conditions
+7. Import the function at the top of the file
+
+TEST FILE STRUCTURE:
+```python
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'solutions'))
+from HumanEval_54 import same_chars
+
+def test_same_chars_<descriptive_name>():
+    '''Test specification 1: <which spec this tests>'''
+    # Test code here
+    result = same_chars(input_args)
+    assert result == expected_output
+```
+
+IMPORTANT:
+- Generate 8-12 test functions
+- Cover all specifications comprehensively
+- Include edge cases (empty inputs, None, boundary values, etc.)
+- Ensure tests are runnable with pytest
+- Each test should be independent and self-contained
+- Use clear, descriptive test names
+
+Please generate the complete test file with all imports and test functions now:
